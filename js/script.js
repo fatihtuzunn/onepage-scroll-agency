@@ -3,5 +3,7 @@ $(document).ready(function () {
     sectionContainer: "section",
     responsiveFallback: 600,
     loop: true,
+    animationTime: 900,
+    easing: "ease-in",
   });
 });

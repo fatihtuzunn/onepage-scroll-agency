@@ -11,12 +11,28 @@ body {
     height: 100%;
     margin: 0 auto;
     overflow: hidden;
+    transform: translate3d(0px, 0%, 0px);
+    transition: all 900ms ease-in 0s;
 }
 
 a {
     text-decoration: none;
 }
 
+
+svg {
+
+    width: 600px;
+    height: 800px;
+
+}
+
+svg image {
+
+    width: 600px;
+    height: 800px;
+
+}
 
 .main {
     float: left;
@@ -28,10 +44,49 @@ a {
 }
 
 
-header {
-    position: relative;
-    z-index: 10;
+.header {
+	background: rgba(195, 195, 195, 0.5);
+	height: 70px;
+	position: fixed;
+	top: 0; 
+    left: 10%;
+	width:80%;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: .5em 1em;
 }
+
+.header h1{
+    margin-left:30px ;
+}
+
+
+.header li a{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+}
+.header li a:hover{
+    opacity: .6;
+}
+
+
+
+.site-navigation ul,
+.site-navigation li {
+    margin: 0;
+    padding: 0;
+}
+
+.site-navigation li {
+    display: inline-block;
+    margin: 1.4em 1em 1em 1em;
+}
+
+
 
 
 .main section {
@@ -46,6 +101,14 @@ header {
 
 .main section.page1 {
     background: #ff4f4f;
+
+}
+.main section.page2 {
+    background: #82c940;
+
+}
+.main section.page3 {
+    background: #6340e2;
 
 }
 
@@ -86,14 +149,14 @@ header {
 .mainObjArea {
     float: right;
     position: absolute;
-    right: -40px;
+    right: 40px;
     z-index: 100;
-    transition: all 1s ease-in;
+    transition: all 2s ease-in;
     margin-right: 45px;
 }
 
-.active .obje1 {
-    top: 138px;
+.obje1 {
+    top: 100px;
 }
 
 
@@ -102,37 +165,47 @@ header {
 
 @media screen and (max-width: 650px) {
     .mainTextArea {
-        top: 200px;
+        top: 50px;
         left: 0;
+        
     }
 
     .textTitle {
         font-size: 20px;
         letter-spacing: 5.5px;
+       text-align: center;
+       margin-left: 15px;
     }
-    .textContent{
+
+    .textContent {
         font-size: 12px;
+        text-align: center;
+        margin-right: 25px;
     }
 
     .mainObjArea {
         right: 0;
+        margin: 0;
     }
 
-    .active .obje1 {
-        top: -100px;
+    .obje1 {
+        top: 100px;
         margin-right: 0px;
         right: 0;
     }
-    .obje1 img {
-        width: 400px;
+
+    .obje1 image,.obje1 svg {
+        width: 100vw;
     }
+    
 }
 
 
-@media screen and (min-width: 1420px){
-.mainTextArea {
-    zoom: 1.25;
-}}
+@media screen and (min-width: 1420px) {
+    .mainTextArea {
+        zoom: 1.25;
+    }
+}
 
 /* Disabled */
 body.disabled-onepage-scroll .onepage-wrapper section {
