@@ -197,6 +197,51 @@ svg image {
     .obje1 image,.obje1 svg {
         width: 100vw;
     }
+
+
+
+
+    .header {
+        background: rgba(195, 195, 195, 0.5);
+        height: 70px;
+        position: fixed;
+        top: 0; 
+        left: 0%;
+        width:100%;
+        z-index: 50;
+        display: flex;
+        justify-content: space-between;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        padding:0;
+    }
+    
+    .header h1{
+        margin: 10px 0;
+        margin-left:0px ;
+    }
+    
+    
+    .header li a{
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+    }
+    .header li a:hover{
+        opacity: .6;
+    }
+
+    .site-navigation ul,
+.site-navigation li {
+    margin: 0;
+    padding: 0;
+}
+
+.site-navigation li {
+    display: inline-block;
+    margin: 1.4em .4em .4em .4em;
+}
+
     
 }
 
